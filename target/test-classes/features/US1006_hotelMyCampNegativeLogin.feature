@@ -22,3 +22,12 @@
         And Login butonuna basar
         Then sayfaya giris yapilmadigini kontrol eder
         And sayfayi kapatir
+
+    Scenario: TC11 yanlis kullanici adi ve yanlis sifre ile giris yapamaz
+      Given kullanici "HMCUrl" anasayfasinda
+      Then Log in yazisina tiklar
+      And gecersiz username girer
+      And gecersiz password girer
+      And Login butonuna basar
+      Then sayfaya giris yapilmadigini kontrol eder
+      And sayfayi kapatir
